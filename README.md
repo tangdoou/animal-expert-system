@@ -1,7 +1,5 @@
 # 动物识别专家系统 - 运行指南
 
-**作者**：唐一璇 (2022101068)  
-**GitHub**：https://github.com/tangdoou/animal-expert-system
 
 ---
 
