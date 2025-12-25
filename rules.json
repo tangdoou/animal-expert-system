@@ -1,0 +1,198 @@
+{
+  "rules": [
+    {
+      "id": "R1",
+      "conditions": ["有毛发"],
+      "conclusion": "哺乳动物",
+      "type": "classification",
+      "description": "有毛发的动物是哺乳动物"
+    },
+    {
+      "id": "R2",
+      "conditions": ["有奶"],
+      "conclusion": "哺乳动物",
+      "type": "classification",
+      "description": "产奶的动物是哺乳动物"
+    },
+    {
+      "id": "R3",
+      "conditions": ["有羽毛"],
+      "conclusion": "鸟",
+      "type": "classification",
+      "description": "有羽毛的动物是鸟"
+    },
+    {
+      "id": "R4",
+      "conditions": ["会飞", "会生蛋"],
+      "conclusion": "鸟",
+      "type": "classification",
+      "description": "会飞且会生蛋的动物是鸟"
+    },
+    {
+      "id": "R5",
+      "conditions": ["吃肉"],
+      "conclusion": "食肉动物",
+      "type": "classification",
+      "description": "吃肉的动物是食肉动物"
+    },
+    {
+      "id": "R6",
+      "conditions": ["有锋利牙齿", "有爪", "眼向前方"],
+      "conclusion": "食肉动物",
+      "type": "classification",
+      "description": "有锋利牙齿、有爪且眼向前方的动物是食肉动物"
+    },
+    {
+      "id": "R7",
+      "conditions": ["哺乳动物", "有蹄"],
+      "conclusion": "有蹄类动物",
+      "type": "classification",
+      "description": "有蹄的哺乳动物是有蹄类动物"
+    },
+    {
+      "id": "R8",
+      "conditions": ["哺乳动物", "反刍"],
+      "conclusion": "有蹄类动物",
+      "type": "classification",
+      "description": "反刍的哺乳动物是有蹄类动物"
+    },
+    {
+      "id": "R9",
+      "conditions": ["哺乳动物", "食肉动物", "有黄褐色皮毛", "有暗斑点"],
+      "conclusion": "豹",
+      "type": "final",
+      "description": "黄褐色皮毛带暗斑点的食肉哺乳动物是豹"
+    },
+    {
+      "id": "R10",
+      "conditions": ["哺乳动物", "食肉动物", "有黄褐色皮毛", "有黑色条纹"],
+      "conclusion": "虎",
+      "type": "final",
+      "description": "黄褐色皮毛带黑色条纹的食肉哺乳动物是虎"
+    },
+    {
+      "id": "R11",
+      "conditions": ["哺乳动物", "食肉动物", "有黄褐色皮毛", "有鬃毛"],
+      "conclusion": "狮子",
+      "type": "final",
+      "description": "黄褐色皮毛带鬃毛的食肉哺乳动物是狮子"
+    },
+    {
+      "id": "R12",
+      "conditions": ["哺乳动物", "食肉动物", "有灰色皮毛", "群居"],
+      "conclusion": "狼",
+      "type": "final",
+      "description": "灰色皮毛且群居的食肉哺乳动物是狼"
+    },
+    {
+      "id": "R13",
+      "conditions": ["有蹄类动物", "有长脖子", "有长腿", "有暗斑点"],
+      "conclusion": "长颈鹿",
+      "type": "final",
+      "description": "长脖子长腿带暗斑点的有蹄类动物是长颈鹿"
+    },
+    {
+      "id": "R14",
+      "conditions": ["有蹄类动物", "有黑色条纹"],
+      "conclusion": "斑马",
+      "type": "final",
+      "description": "有黑色条纹的有蹄类动物是斑马"
+    },
+    {
+      "id": "R15",
+      "conditions": ["有蹄类动物", "有角", "产奶"],
+      "conclusion": "牛",
+      "type": "final",
+      "description": "有角且产奶的有蹄类动物是牛"
+    },
+    {
+      "id": "R16",
+      "conditions": ["有蹄类动物", "能快跑", "有长腿"],
+      "conclusion": "马",
+      "type": "final",
+      "description": "长腿且能快跑的有蹄类动物是马"
+    },
+    {
+      "id": "R17",
+      "conditions": ["鸟", "不会飞", "有长脖子", "有长腿", "有黑白二色"],
+      "conclusion": "鸵鸟",
+      "type": "final",
+      "description": "不会飞的长脖子长腿黑白二色鸟是鸵鸟"
+    },
+    {
+      "id": "R18",
+      "conditions": ["鸟", "不会飞", "会游泳", "有黑白二色"],
+      "conclusion": "企鹅",
+      "type": "final",
+      "description": "不会飞但会游泳的黑白二色鸟是企鹅"
+    },
+    {
+      "id": "R19",
+      "conditions": ["鸟", "善飞"],
+      "conclusion": "信天翁",
+      "type": "final",
+      "description": "善于飞行的鸟是信天翁"
+    },
+    {
+      "id": "R20",
+      "conditions": ["鸟", "善飞", "有锋利爪", "吃肉"],
+      "conclusion": "老鹰",
+      "type": "final",
+      "description": "善飞且有锋利爪吃肉的鸟是老鹰"
+    }
+  ],
+  "features": [
+    "有毛发",
+    "有奶",
+    "有羽毛",
+    "会飞",
+    "会生蛋",
+    "吃肉",
+    "有锋利牙齿",
+    "有爪",
+    "眼向前方",
+    "有蹄",
+    "反刍",
+    "有角",
+    "产奶",
+    "能快跑",
+    "有黄褐色皮毛",
+    "有灰色皮毛",
+    "有黑白二色",
+    "有暗斑点",
+    "有黑色条纹",
+    "有鬃毛",
+    "有长脖子",
+    "有长腿",
+    "有锋利爪",
+    "不会飞",
+    "会游泳",
+    "善飞",
+    "群居"
+  ],
+  "featureCategories": {
+    "基础体征": ["有毛发", "有奶", "有羽毛", "会飞", "会生蛋"],
+    "食性相关": ["吃肉", "有锋利牙齿", "有爪", "眼向前方", "有锋利爪"],
+    "蹄类相关": ["有蹄", "反刍", "有角", "产奶", "能快跑"],
+    "皮毛颜色": ["有黄褐色皮毛", "有灰色皮毛", "有黑白二色"],
+    "花纹特征": ["有暗斑点", "有黑色条纹", "有鬃毛"],
+    "身体结构": ["有长脖子", "有长腿"],
+    "行为特征": ["不会飞", "会游泳", "善飞", "群居"]
+  },
+  "animals": ["虎", "豹", "狮子", "狼", "斑马", "长颈鹿", "牛", "马", "企鹅", "鸵鸟", "信天翁", "老鹰"],
+  "intermediates": ["哺乳动物", "鸟", "食肉动物", "有蹄类动物"],
+  "animalEmojis": {
+    "虎": "🐅",
+    "豹": "🐆",
+    "狮子": "🦁",
+    "狼": "🐺",
+    "斑马": "🦓",
+    "长颈鹿": "🦒",
+    "牛": "🐄",
+    "马": "🐴",
+    "企鹅": "🐧",
+    "鸵鸟": "🦃",
+    "信天翁": "🦅",
+    "老鹰": "🦅"
+  }
+}

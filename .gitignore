@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 课设参考文档（不上传）
+书.md
+课设.md
+需求.md
+
+# 大型录屏文件（可选不上传）
+# screenshots/*.webp

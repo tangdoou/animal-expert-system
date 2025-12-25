@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动物识别专家系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 头部导航 -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🦁</span>
+                <h1>动物识别专家系统</h1>
+            </div>
+            <nav class="nav-tabs">
+                <button class="tab-btn active" data-tab="forward">
+                    <span class="tab-icon">🔍</span>
+                    正向推理
+                </button>
+                <button class="tab-btn" data-tab="backward">
+                    <span class="tab-icon">🎯</span>
+                    反向推理
+                </button>
+                <button class="tab-btn" data-tab="rules">
+                    <span class="tab-icon">📋</span>
+                    规则管理
+                </button>
+                <button class="tab-btn" data-tab="about">
+                    <span class="tab-icon">ℹ️</span>
+                    关于系统
+                </button>
+            </nav>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 正向推理页面 -->
+            <section id="forward-page" class="page active">
+                <div class="page-header">
+                    <h2>正向推理 - 从特征识别动物</h2>
+                    <p class="page-desc">选择您观察到的动物特征，系统将推导出可能的动物</p>
+                </div>
+                
+                <div class="forward-container">
+                    <div class="features-panel">
+                        <h3>选择特征</h3>
+                        <div id="features-list" class="features-grid">
+                            <!-- 特征列表由 JS 动态生成 -->
+                        </div>
+                        <div class="action-bar">
+                            <button id="clear-features" class="btn btn-secondary">清空选择</button>
+                            <button id="start-forward" class="btn btn-primary">开始推理</button>
+                        </div>
+                    </div>
+                    
+                    <div class="result-panel">
+                        <h3>推理结果</h3>
+                        <div id="forward-result" class="result-content">
+                            <div class="empty-state">
+                                <span class="empty-icon">🤔</span>
+                                <p>请选择特征后点击"开始推理"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 反向推理页面 -->
+            <section id="backward-page" class="page">
+                <div class="page-header">
+                    <h2>反向推理 - 验证目标动物</h2>
+                    <p class="page-desc">选择一个目标动物，系统将逐步询问验证所需的特征</p>
+                </div>
+                
+                <div class="backward-container">
+                    <div class="animals-panel">
+                        <h3>选择目标动物</h3>
+                        <div id="animals-grid" class="animals-grid">
+                            <!-- 动物卡片由 JS 动态生成 -->
+                        </div>
+                    </div>
+                    
+                    <div class="chat-panel">
+                        <h3>验证过程</h3>
+                        <div id="chat-box" class="chat-box">
+                            <div class="empty-state">
+                                <span class="empty-icon">💬</span>
+                                <p>选择一个动物开始验证</p>
+                            </div>
+                        </div>
+                        <div id="answer-buttons" class="answer-buttons" style="display: none;">
+                            <button class="btn btn-yes" data-answer="yes">✓ 是</button>
+                            <button class="btn btn-no" data-answer="no">✗ 否</button>
+                            <button class="btn btn-unknown" data-answer="unknown">? 不确定</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 规则管理页面 -->
+            <section id="rules-page" class="page">
+                <div class="page-header">
+                    <h2>规则库管理</h2>
+                    <p class="page-desc">查看、添加、编辑或删除产生式规则</p>
+                </div>
+                
+                <div class="rules-container">
+                    <div class="rules-toolbar">
+                        <button id="add-rule-btn" class="btn btn-primary">
+                            <span>+</span> 添加规则
+                        </button>
+                        <div class="search-box">
+                            <input type="text" id="rule-search" placeholder="搜索规则...">
+                        </div>
+                    </div>
+                    
+                    <div id="rules-list" class="rules-list">
+                        <!-- 规则列表由 JS 动态生成 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关于系统页面 -->
+            <section id="about-page" class="page">
+                <div class="page-header">
+                    <h2>关于系统</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="info-card">
+                        <h3>🎓 课程作业</h3>
+                        <p>本系统是人工智能与专家系统课程的课程设计作业，基于产生式系统实现动物识别功能。</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📚 理论基础</h3>
+                        <ul>
+                            <li><strong>产生式系统</strong>：使用 IF-THEN 规则表示知识</li>
+                            <li><strong>正向推理</strong>：从已知事实推导结论（自底向上）</li>
+                            <li><strong>反向推理</strong>：从目标出发验证条件（自顶向下）</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🔧 技术架构</h3>
+                        <ul>
+                            <li><strong>后端</strong>：Python + Flask</li>
+                            <li><strong>前端</strong>：HTML + CSS + JavaScript</li>
+                            <li><strong>存储</strong>：JSON 文件</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>🦁 识别范围</h3>
+                        <p>系统可识别 12 种动物：</p>
+                        <div class="animal-tags" id="about-animals">
+                            <!-- 由 JS 动态生成 -->
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>📖 参考资料</h3>
+                        <p>《人工智能与专家系统》（第二版）P19 例 2.7、5.3.2 节</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 添加/编辑规则模态框 -->
+        <div id="rule-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">添加规则</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="rule-form">
+                        <input type="hidden" id="rule-id">
+                        <div class="form-group">
+                            <label>前提条件（用逗号分隔）</label>
+                            <input type="text" id="rule-conditions" placeholder="例如：哺乳动物, 食肉动物, 有黄褐色皮毛">
+                        </div>
+                        <div class="form-group">
+                            <label>结论</label>
+                            <input type="text" id="rule-conclusion" placeholder="例如：虎">
+                        </div>
+                        <div class="form-group">
+                            <label>描述（可选）</label>
+                            <input type="text" id="rule-description" placeholder="规则的文字描述">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary modal-cancel">取消</button>
+                    <button class="btn btn-primary" id="save-rule-btn">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
